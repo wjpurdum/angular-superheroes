@@ -10,7 +10,8 @@
   <h2>Superhero Listing</h2>
   <input type="text" ng-model="vm.search">
   <p>User input: {{vm.search}}</p>
-  <div ng-repeat="hero in vm.superheroes | filter:vm.search">
+  <div ng-repeat="hero in vm.superheroes | filter:vm.search"
+    ng-class="{'marvel' : hero.group === 'Marvel' , 'indpt': hero.group === 'Independent', 'DC': hero.group === 'DC'}">
     <p>{{$index + 1}}. {{hero.name}} - {{hero.number}}</p>
     <p>Affiliation: {{hero.group}} </p>
   </div>
