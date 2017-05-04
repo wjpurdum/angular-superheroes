@@ -14,6 +14,8 @@
     ng-class="{'marvel' : hero.group === 'Marvel' , 'indpt': hero.group === 'Independent', 'DC': hero.group === 'DC'}">
     <p>{{$index + 1}}. {{hero.name}} - {{hero.number}}</p>
     <p>Affiliation: {{hero.group}} </p>
+    <button ng-click="vm.viewImage[$index] = !vm.viewImage[$index]">Get Photo</button>
+     <img ng-src='{{hero.img}}' ng-show="vm.viewImage[$index]">
   </div>
 
 </body>
