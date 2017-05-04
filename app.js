@@ -63,9 +63,9 @@ angular.module("superheroApp", [])
 function SuperheroesControllerFunction () {
   this.superheroes = superheroList
   this.addHero = function() {
-    let hero = {name: this.newHero.title, author: this.newGrumble.author, content: this.newGrumble.content, photo_url: this.newGrumble.photo_url}
-    this.grumbles.push(grumble)
-    this.newGrumble = ''
+    let hero = {name: this.newHero.name, number: this.newHero.number, content: this.newHero.group, img: this.newHero.img}
+    this.superheroes.push(hero)
+    this.newHero = ''
   }
   this.toggleShow = function(hero) {
     hero.visible = !hero.visible
